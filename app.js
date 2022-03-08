@@ -1,4 +1,7 @@
-function updateCaseNumber(product, price, isIncreasing) {
+// console.log("hello from chrome dev tool sources tab");
+
+function updateProductNumber(product, price, isIncreasing) {
+    console.count("update func clicked");
     const productInput = document.getElementById(product + "-number");
     let productNumber = productInput.value;
     if (isIncreasing) { // evabeo kora jay (isIncreasing == true)
@@ -37,16 +40,19 @@ function calculateTotal() {
 
 // handle phone increase and decrease events
 document.getElementById("phone-plus").addEventListener("click", function () {
-    updateCaseNumber("phone", 1219, true);
+    updateProductNumber("phone", 1219, true);
 });
+// document.getElementById("phone-plus").addEventListener("mousemove", function () {
+//     updateProductNumber("phone", 1219, true);
+// });
 document.getElementById("phone-minus").addEventListener("click", function () {
-    updateCaseNumber("phone", 1219, false);
+    updateProductNumber("phone", 1219, false);
 });
 
 // handle case increase and decrease events
 document.getElementById("case-plus").addEventListener("click", function () {
-    updateCaseNumber("case", 59, true);
+    updateProductNumber("case", 59, true);
 });
 document.getElementById("case-minus").addEventListener("click", function () {
-    updateCaseNumber("case", 59, false);
+    updateProductNumber("case", 59, false);
 });
